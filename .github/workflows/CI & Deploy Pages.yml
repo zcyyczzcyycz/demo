@@ -1,4 +1,4 @@
-name: CI & Deploy Pages
+name: CI Check
 
 on:
   push:
@@ -17,27 +17,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "pnpm" # 改成 pnpm 缓存
-          cache-dependency-path: "pnpm-lock.yaml"
 
-      - name: Install pnpm
-        run: npm install -g pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Build
         run: pnpm run build --if-present
-
-      # 只有 push 到 main 的时候才上传产物 + 部署；PR 只做构建校验
-      - name: Upload Pages artifact
-        if: github.event_name == 'push'
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
-
-      - name: Deploy to GitHub Pages
-        if: github.event_name == 'push'
-        uses: actions/deploy-pages@v4
-        with:
-          artifact_name: "github-pages"
