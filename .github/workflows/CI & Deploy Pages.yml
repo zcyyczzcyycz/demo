@@ -17,13 +17,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "npm"
+          cache: "pnpm" # 改成 pnpm 缓存
+          cache-dependency-path: "pnpm-lock.yaml"
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: npm run build --if-present
+        run: pnpm run build --if-present
 
       # 只有 push 到 main 的时候才上传产物 + 部署；PR 只做构建校验
       - name: Upload Pages artifact
