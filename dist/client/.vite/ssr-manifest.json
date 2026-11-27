@@ -1,0 +1,34 @@
+{
+  "\u0000plugin-vue:export-helper": [],
+  "\u0000vite/modulepreload-polyfill.js": [],
+  "\u0000vite/preload-helper.js": [],
+  "index.html": [],
+  "node_modules/.pnpm/@vue+reactivity@3.5.45/node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [],
+  "node_modules/.pnpm/@vue+runtime-core@3.5.45/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [],
+  "node_modules/.pnpm/@vue+runtime-dom@3.5.45/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [],
+  "node_modules/.pnpm/@vue+shared@3.5.45/node_modules/@vue/shared/dist/shared.esm-bundler.js": [],
+  "node_modules/.pnpm/pinia@4.1.0_@vue+devtools-a_e878a6eeed145aeaf4406d4510ba15a8/node_modules/pinia/dist/pinia.js": [],
+  "node_modules/.pnpm/vue-router@5.5.1_@vue+compi_c27de9b3af0474da9362b71ac7675848/node_modules/vue-router/dist/devtools-RytpElE1.js": [],
+  "node_modules/.pnpm/vue-router@5.5.1_@vue+compi_c27de9b3af0474da9362b71ac7675848/node_modules/vue-router/dist/useApi-SF8tY_yo.js": [],
+  "node_modules/.pnpm/vue-router@5.5.1_@vue+compi_c27de9b3af0474da9362b71ac7675848/node_modules/vue-router/dist/vue-router.js": [],
+  "src/App.vue": [],
+  "src/components/Test.vue": [],
+  "src/components/Test.vue?vue&type=script&lang.ts": [],
+  "src/js/index.js": [],
+  "src/js/route.js": [],
+  "src/main.js": [],
+  "src/pages/About.vue": [
+    "/assets/About-CaRO8uRV.js"
+  ],
+  "src/pages/About.vue?vue&type=script&lang.ts": [
+    "/assets/About-CaRO8uRV.js"
+  ],
+  "src/pages/Home.vue": [],
+  "src/pages/Home.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/pages/Home.vue?vue&type=style&index=0&lang.module.css": [],
+  "src/pages/NotFound.vue": [],
+  "src/pages/NotFound.vue?vue&type=script&lang.ts": [],
+  "src/sass/index.scss": [],
+  "src/ts/index.ts": [],
+  "src/ts/store.ts": []
+}

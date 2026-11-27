@@ -1,0 +1,23 @@
+.box {
+  width: 300px;
+  height: 102px;
+  background: url("@/assets/rabbit1.png");
+}
+
+.dark .btn {
+  color: #fff;
+}
+
+ul,
+ol {
+  text-align: left;
+}
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+/* # sourceMappingURL=index.css.map */
