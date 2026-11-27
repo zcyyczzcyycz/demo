@@ -1,5 +1,30 @@
 {
 	"dependencies": {
-		"axios": "^1.21.0"
+		"axios": "^1.21.0",
+		"pinia": "^4.1.0",
+		"vue": "^3.5.45",
+		"vue-router": "^5.5.1"
+	},
+	"devDependencies": {
+		"@unhead/vue": "^3.5.2",
+		"@vitejs/plugin-vue": "^6.0.11",
+		"@vue/tsconfig": "^0.9.1",
+		"express": "^5.3.0",
+		"sass": "^1.107.1",
+		"typescript": "~5.8.3",
+		"vite": "^8.3.8",
+		"vite-ssg": "^28.3.0",
+		"vue-tsc": "^3.3.14"
+	},
+	"scripts": {
+		"dev": "vite",
+		"ssr:dev": "node server",
+		"ssr:prod": "node server1",
+		"type-check": "vue-tsc --noEmit",
+		"build": "vite build",
+		"build:ssg": "vite-ssg build",
+		"build:client-ssr": "vite build --outDir dist/client --ssrManifest",
+		"build:ssr": "vite build --outDir dist/server --ssr src/ssr_entry.js",
+		"scss": "sass --watch src/sass:src/css"
 	}
 }

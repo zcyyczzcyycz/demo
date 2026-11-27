@@ -1,0 +1,45 @@
+name: CI & Deploy Pages
+
+# 触发规则
+on:
+  push:
+    branches: [main] # 只有合并进main之后，才执行部署
+  pull_request:
+    branches: [main] # PR阶段，只做CI校验，不部署
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build --if-present
+
+      - name: Test
+        run: npm test --if-present
+
+      # ✅ 只有 push 到 main（不是PR）才执行部署
+      - name: Deploy to GitHub Pages
+        if: github.event_name == 'push'
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: "github-pages"
+
+      # 上传产物作为 pages artifact（deploy-pages 依赖它）
+      - name: Upload Pages artifact
+        if: github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # 这里改成你的打包输出目录，vite默认dist
+          path: ./dist

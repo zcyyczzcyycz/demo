@@ -1,0 +1,1 @@
+import{i as e,n as t,r as n,t as r}from"./main-CdfrEMpu.js";var i={props:{count:Number},data(){return{}},methods:{add(){}}};function a(r,i,a,o,s,c){return e(),n(`div`,null,[...i[0]||=[t(`p`,null,`about`,-1)]])}var o=r(i,[[`render`,a]]);export{o as default};
